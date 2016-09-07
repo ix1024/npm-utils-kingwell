@@ -6,7 +6,7 @@
 	var utils = require('npm-utils-kingwell');
 
 ### log
-	log(inof,color);
+	log(info,color);
 	color === 
 			black
 			red

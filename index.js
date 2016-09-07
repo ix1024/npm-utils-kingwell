@@ -2,9 +2,13 @@
  	slice: function(str, length, symbol) {
  		var result = '',
  			sym = symbol || '...';
+
  		if (!str || typeof str !== 'string' || !length) {
  			result = str;
  		} else {
+ 			if (str.length < length) {
+ 				sym = '';
+ 			}
  			result = str.slice(0, length) + sym;
  		}
 
@@ -92,6 +96,49 @@
  		console.log(new Date());
  		console.log(obj);
  		console.log('\n' + line + end + '\n');
+ 	},
+ 	inArray: function(item, array) {
+ 		for (var i = 0, len = array.length; i < len; i++) {
+ 			if (array[i] === item) {
+ 				return i;
+ 			}
+ 		}
+ 		return -1;
+ 	},
+ 	//变为稠密数据
+ 	toDenseArray: function(array) {
+ 		if (Array.isArray(array)) {
+ 			return array.filter(function(item) {
+ 				return item;
+ 			});
+ 		} else {
+ 			return array;
+ 		}
+ 	},
+ 	//删除重复项
+ 	delArray: function(array) {
+ 		var n = [];
+ 		var arr = array || [];
+
+ 		if (arr.length < 1) {
+ 			return arr
+ 		}
+ 		for (var i = 0; i < arr.length; i++) {
+ 			var st = false
+ 			for (var j = 0; j < n.length; j++) {
+ 				if (arr[i].toString() == n[j].toString()) {
+ 					st = true;
+ 				}
+ 			}
+ 			if (!st) {
+ 				n.push(arr[i]);
+ 			}
+ 		}
+ 		return n;
+ 	},
+ 	strimHtml: function(str) {
+ 		var reg = /<(?:.|\s)*?>/ig;
+ 		return str.replace(reg, '');
  	}
  };
  module.exports = utils;

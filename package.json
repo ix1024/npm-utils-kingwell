@@ -1,6 +1,6 @@
 {
   "name": "npm-utils-kingwell",
-  "version": "1.1.7",
+  "version": "1.1.17",
   "description": "Nodejs utils",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,25 @@
     "utils",
     "nodejs",
     "tools",
-    "npm"
+    "npm",
+    "array",
+    "inArray",
+    "log",
+    "strimHtml",
+    "strim html"
   ],
-  "author": "kingwell leng",
+  "author": {
+    "name": "kingwell leng"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lengjh/npm-utils-kingwell/issues"
   },
-  "homepage": "https://github.com/lengjh/npm-utils-kingwell#readme"
+  "homepage": "https://github.com/lengjh/npm-utils-kingwell#readme",
+  "readme": "### Installation\r\n\t$ npm i npm-utils-kingwell\r\n\t$ npm i npm-utils-kingwell --save\r\n\r\n### Require\r\n\tvar utils = require('npm-utils-kingwell');\r\n\r\n### log\r\n\tlog(info,color);\r\n\tcolor === \r\n\t\t\tblack\r\n\t\t\tred\r\n\t\t\tgreen\r\n\t\t\tbrown\r\n\t\t\tblue\r\n\t\t\tmagenta\r\n\t\t\tcyan\r\n\t\t\tgray\r\n\t\t\tdarkGray\r\n\t\t\tlightRed\r\n\t\t\tlightGreen\r\n\t\t\tyellow\r\n\t\t\tlightBlue\r\n\t\t\tlightMagenta\r\n\t\t\tlightCyan\r\n\t\t\twhite\r\n\t\r\n\tutils.log('something','red');//color -> red\t\r\n\r\n![](images/color-demo1.png)\r\n\r\n### Interception string\r\n\tslice(String);\t\r\n\tvar str = 'abcdefghijklmnopqrstuvwxyz';\r\n\tconsole.log(utils.slice(str,3));//output 'abcd...'\r\n\tconsole.log(utils.slice(str,3,'-'));//output 'abcd-'\r\n\tconsole.log(utils.slice(str,3,'+'));//output 'abcd+'\r\n\r\n### Get date string\r\n\tgetDateString(Date);\r\n\tconsole.log(utils.getDateString(new Date)); //output 2016-08-10 11:32:00\r\n### toDenseArray\r\n\tvar arr = [1,2,3,'',4];\r\n\tutils.toDenseArray(arr) //output [1,2,3,4]\r\n### delArray\r\n\tvar arr = [1,2,2,3,3,3,3,4];\r\n\tutils.delArray(arr); //output [1,2,3,4]\r\n### inArray\r\n\tvar arr = ['a','b','c']\r\n\tutils.inArray(b,arr); //output 1\r\n### strimHtml\r\n\tvar str = '<div>html</div>';\r\n\tutils.strimHtml(str);//output html;\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "a463c71580b65d55b0ec969ae0d3d749c533613e",
+  "_id": "npm-utils-kingwell@1.1.17",
+  "_shasum": "5966e8a579b316c5a98f8cb48073bad6d07f108c",
+  "_from": "npm-utils-kingwell@>=1.0.7 <2.0.0"
 }

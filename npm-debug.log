@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'E:\\Github\\npm-utils-kingwell',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\hz15041151\\AppData\\Roaming\\npm-cache\\npm-utils-kingwell\\1.1.23\\package.tgz',
+9 verbose tar pack   'E:\\Github\\npm-utils-kingwell' ]
+10 verbose tarball C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package.tgz
+11 verbose folder E:\Github\npm-utils-kingwell
+12 info prepublish npm-utils-kingwell@1.1.23
+13 verbose addLocalTarball adding from inside cache C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package.tgz
+14 silly cache afterAdd npm-utils-kingwell@1.1.23
+15 verbose afterAdd C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package\package.json written
+17 silly publish { name: 'npm-utils-kingwell',
+17 silly publish   version: '1.1.23',
+17 silly publish   description: 'Nodejs utils',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/lengjh/npm-utils-kingwell.git' },
+17 silly publish   keywords:
+17 silly publish    [ 'express',
+17 silly publish      'ejs',
+17 silly publish      'jade',
+17 silly publish      'utils',
+17 silly publish      'nodejs',
+17 silly publish      'tools',
+17 silly publish      'npm',
+17 silly publish      'array',
+17 silly publish      'inArray',
+17 silly publish      'log',
+17 silly publish      'strimHtml',
+17 silly publish      'strim html' ],
+17 silly publish   author: { name: 'kingwell leng' },
+17 silly publish   license: 'ISC',
+17 silly publish   bugs: { url: 'https://github.com/lengjh/npm-utils-kingwell/issues' },
+17 silly publish   homepage: 'https://github.com/lengjh/npm-utils-kingwell#readme',
+17 silly publish   readme: '### Installation\r\n\t$ npm i npm-utils-kingwell\r\n\t$ npm i npm-utils-kingwell --save\r\n\r\n### Require\r\n\tvar utils = require(\'npm-utils-kingwell\');\r\n\r\n### log\r\n\tlog(info,color);\r\n\tcolor === \r\n\t\t\tblack\r\n\t\t\tred\r\n\t\t\tgreen\r\n\t\t\tbrown\r\n\t\t\tblue\r\n\t\t\tmagenta\r\n\t\t\tcyan\r\n\t\t\tgray\r\n\t\t\tdarkGray\r\n\t\t\tlightRed\r\n\t\t\tlightGreen\r\n\t\t\tyellow\r\n\t\t\tlightBlue\r\n\t\t\tlightMagenta\r\n\t\t\tlightCyan\r\n\t\t\twhite\r\n\t\r\n\tutils.log(\'something\',\'red\');//color -> red\t\r\n\r\n![](images/color-demo1.png)\r\n\r\n### Interception string\r\n\tslice(String);\t\r\n\tvar str = \'abcdefghijklmnopqrstuvwxyz\';\r\n\tconsole.log(utils.slice(str,3));//output \'abcd...\'\r\n\tconsole.log(utils.slice(str,3,\'-\'));//output \'abcd-\'\r\n\tconsole.log(utils.slice(str,3,\'+\'));//output \'abcd+\'\r\n\r\n### Get date string\r\n\tgetDateString(Date);\r\n\tconsole.log(utils.getDateString(new Date)); //output 2016-08-10 11:32:00\r\n### toDenseArray\r\n\tvar arr = [1,2,3,\'\',4];\r\n\tutils.toDenseArray(arr) //output [1,2,3,4]\r\n### delArray\r\n\tvar arr = [1,2,2,3,3,3,3,4];\r\n\tutils.delArray(arr); //output [1,2,3,4]\r\n### inArray\r\n\tvar arr = [\'a\',\'b\',\'c\']\r\n\tutils.inArray(b,arr); //output 1\r\n### strimHtml\r\n\tvar str = \'<div>html</div>\';\r\n\tutils.strimHtml(str);//output html;\r\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'a463c71580b65d55b0ec969ae0d3d749c533613e',
+17 silly publish   _id: 'npm-utils-kingwell@1.1.23',
+17 silly publish   _shasum: '5b8c70e6e0f5b8a2f32832adecb636110618e495',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name npm-utils-kingwell
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/npm-utils-kingwell
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\hz15041151\AppData\Roaming\npm-cache\npm-utils-kingwell\1.1.23\package.tgz
+25 verbose request uri https://registry.npmjs.org/npm-utils-kingwell
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 16:58:53
+28 verbose request using bearer token for auth
+29 verbose request id 2f3728717faed84a
+30 http request PUT https://registry.npmjs.org/npm-utils-kingwell
+31 http 403 https://registry.npmjs.org/npm-utils-kingwell
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '96',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 16 Nov 2016 08:58:55 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-itm7425-ITM',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1479286734.497995,VS0,VE573',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 verbose request invalidating C:\Users\hz15041151\AppData\Roaming\npm-cache\registry.npmjs.org\npm-utils-kingwell on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 1.1.23." : npm-utils-kingwell
+35 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+35 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+35 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid npm-utils-kingwell
+38 verbose cwd E:\Github\npm-utils-kingwell
+39 error Windows_NT 6.1.7601
+40 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+41 error node v4.3.1
+42 error npm  v2.14.12
+43 error code E403
+44 error "You cannot publish over the previously published version 1.1.23." : npm-utils-kingwell
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

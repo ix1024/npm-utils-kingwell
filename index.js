@@ -66,25 +66,74 @@
  		}
  		return subObj;
  	},
- 	log: function(obj, type) {
- 		var colors = {
- 			black: '\033[22;30m',
- 			red: '\033[22;31m',
- 			green: '\033[22;32m',
- 			brown: '\033[22;33m',
- 			blue: '\033[22;34m',
- 			magenta: '\033[22;35m',
- 			cyan: '\033[22;36m',
- 			gray: '\033[22;37m',
- 			darkGray: '\033[01;30m',
- 			lightRed: '\033[01;31m',
- 			lightGreen: '\033[01;32m',
- 			yellow: '\033[01;33m',
- 			lightBlue: '\033[01;34m',
- 			lightMagenta: '\033[01;35m',
- 			lightCyan: '\033[01;36m',
- 			white: '\033[01;37m'
+ 	/**
+ 	 * objectSort
+ 	 * @param  {Object}  source object
+ 	 * @param  {Number}  0 Or -1
+ 	 * @return {Object}        new Object;
+ 	 */
+ 	objectSort: function(source, sort) {
+ 		'use strict';
+ 		var oldObject = source || {};
+ 		var newObject = {};
+ 		var _sort = sort || 0;
+ 		var keys;
+ 		var compareNumbers = function(a, b) {
+ 			var z;
+ 			if (_sort < 0) {
+ 				z = a;
+ 				a = b;
+ 				b = z;
+ 			}
+ 			if (a > b) {
+ 				return 1;
+ 			} else if (a < b) {
+ 				return -1;
+ 			} else {
+ 				return 0;
+ 			}
  		};
+ 		keys = Object.keys(oldObject).sort(compareNumbers);
+ 		keys.forEach(function(item) {
+ 			newObject[item] = oldObject[item];
+ 		});
+ 		return newObject;
+ 	},
+ 	error: function(msg) {
+ 		console.log(this.colorsStart['red'], msg, this.colorsEnd);
+ 	},
+ 	success: function(msg) {
+ 		console.log(this.colorsStart['green'], msg, this.colorsEnd);
+ 	},
+ 	info: function(msg) {
+ 		console.log(this.colorsStart['lightCyan'], msg, this.colorsEnd);
+ 	},
+ 	warn: function(msg) {
+ 		console.log(this.colorsStart['yellow'], msg, this.colorsEnd);
+ 	},
+ 	colorsStart: {
+ 		black: '\033[22;30m',
+ 		red: '\033[22;31m',
+ 		green: '\033[22;32m',
+ 		brown: '\033[22;33m',
+ 		blue: '\033[22;34m',
+ 		magenta: '\033[22;35m',
+ 		cyan: '\033[22;36m',
+ 		gray: '\033[22;37m',
+ 		darkGray: '\033[01;30m',
+ 		lightRed: '\033[01;31m',
+ 		lightGreen: '\033[01;32m',
+ 		yellow: '\033[01;33m',
+ 		lightBlue: '\033[01;34m',
+ 		lightMagenta: '\033[01;35m',
+ 		lightCyan: '\033[01;36m',
+ 		white: '\033[01;37m'
+ 	},
+ 	colorsEnd: '\033[0m',
+ 	log: function(obj, type, options) {
+
+ 		var ops = options || {};
+ 		var showTime = ops.showTime === false ? false : true;
  		var line = '';
  		var lineArr = [];
  		for (var l = 0; l < 50; l++) {
@@ -92,8 +141,10 @@
  		}
  		line = lineArr.join('');
  		var end = '\033[0m';
- 		console.log((colors[type] || '') + '\n' + line);
- 		console.log(new Date());
+ 		console.log((this.colorsStart[type] || '') + '\n' + line);
+ 		if (ops.showTime) {
+ 			console.log(new Date());
+ 		}
  		console.log(obj);
  		console.log('\n' + line + end + '\n');
  	},

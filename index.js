@@ -66,6 +66,13 @@
  		}
  		return subObj;
  	},
+ 	getNonceStr: function(length) {
+ 		var len = length || 36;
+ 		return Math.random().toString(36).substr(2, len);
+ 	},
+ 	getTimesTamp: function() {
+ 		return parseInt(new Date().getTime() / 1000) + '';
+ 	},
  	/**
  	 * objectSort
  	 * @param  {Object}  source object

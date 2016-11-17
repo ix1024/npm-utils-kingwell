@@ -1,4 +1,3 @@
-[![NPM info][nodei.co]][npm-url]
 ### Installation
 [![npm version](https://badge.fury.io/js/npm-utils-kingwell.svg)](http://badge.fury.io/js/npm-utils-kingwell)
 

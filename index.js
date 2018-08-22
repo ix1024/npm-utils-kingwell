@@ -269,6 +269,39 @@
 		},
 		end: '\033[0m'
 	};
+
+	function getColor(key) {
+		var obj = {
+			start: {
+				black: '\033[22;30m',
+				red: '\033[22;31m',
+				green: '\033[22;32m',
+				brown: '\033[22;33m',
+				blue: '\033[22;34m',
+				magenta: '\033[22;35m',
+				cyan: '\033[22;36m',
+				gray: '\033[22;37m',
+				darkGray: '\033[01;30m',
+				lightRed: '\033[01;31m',
+				lightGreen: '\033[01;32m',
+				yellow: '\033[01;33m',
+				lightBlue: '\033[01;34m',
+				lightMagenta: '\033[01;35m',
+				lightCyan: '\033[01;36m',
+				white: '\033[01;37m'
+			},
+			end: '\033[0m'
+		};
+		return function(string) {
+			return obj.start[key] + string + obj.end;
+		};
+	}
+
+	var green = getColor('green');
+	var red = getColor('red');
+	var yellow = getColor('yellow');
+	var cyan = getColor('cyan');
+
 	/**
 	 * [log description]
 	 * @param  {[type]} msg   [description]
@@ -291,24 +324,44 @@
 		}
 	};
 	fn.success = function() {
-		log(color.start.green);
-		log.apply(this, arguments);
-		log(color.end);
+		if (arguments.length === 1 && typeof arguments[0] === 'string') {
+			console.log(green(arguments[0]));
+		} else {
+			log(color.start.green);
+			log.apply(this, arguments);
+			log(color.end);
+		}
+
 	};
 	fn.error = function() {
-		log(color.start.red);
-		log.apply(this, arguments);
-		log(color.end);
+		if (arguments.length === 1 && typeof arguments[0] === 'string') {
+			console.log(red(arguments[0]));
+		} else {
+			log(color.start.red);
+			log.apply(this, arguments);
+			log(color.end);
+		}
+
 	};
 	fn.warn = function() {
-		log(color.start.yellow);
-		log.apply(this, arguments);
-		log(color.end);
+		if (arguments.length === 1 && typeof arguments[0] === 'string') {
+			console.log(yellow(arguments[0]));
+		} else {
+			log(color.start.yellow);
+			log.apply(this, arguments);
+			log(color.end);
+		}
+
 	};
 	fn.info = function() {
-		log(color.start.cyan);
-		log.apply(this, arguments);
-		log(color.end);
+		if (arguments.length === 1 && typeof arguments[0] === 'string') {
+			console.log(cyan(arguments[0]));
+		} else {
+			log(color.start.cyan);
+			log.apply(this, arguments);
+			log(color.end);
+		}
+
 	};
 
 	var utils = new Utils();

@@ -1,6 +1,6 @@
 {
   "name": "npm-utils-kingwell",
-  "version": "1.2.4",
+  "version": "1.2.7",
   "description": "Nodejs utils",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,8 @@
     "array",
     "inArray",
     "log",
+    "sort",
+    "object-sort",
     "strimHtml",
     "strim html"
   ],
